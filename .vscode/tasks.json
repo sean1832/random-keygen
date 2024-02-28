@@ -38,19 +38,13 @@
             "problemMatcher": "$msCompile"
         },
         {
-            "label": "publish",
-            "command": "dotnet",
+            "label": "warp",
+            "command": "dotnet-warp",
             "type": "shell",
             "args": [
-                "publish",
-                "-c",
-                "Release",
-                "--self-contained",
-                "true",
-                "--runtime",
-                "win-x64",
-                "/p:PublishSingleFile=true",
-                "/p:DebugType=None",
+                "randkey/randkey.csproj",
+                "-o",
+                "randkey/bin/Warp/randkey.exe"
             ],
             "group": "build",
             "presentation": {
